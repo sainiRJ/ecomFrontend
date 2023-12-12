@@ -8,6 +8,7 @@ import Navbar from '../../components/common/Navbar/Navbar';
 import HomeCarousel from '../../layouts/HomeCarousel/HomeCarousel';
 import Feature from '../../layouts/Feature/Feature';
 import Category from '../../layouts/Category/Category';
+import Products from '../../components/Products/Products';
 
 
 function Home() {
@@ -17,6 +18,7 @@ function Home() {
     <HomeCarousel></HomeCarousel>
     <Feature></Feature>
     <Category></Category>
+    <Products></Products>
   </>
    
   )
