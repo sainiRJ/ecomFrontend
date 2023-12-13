@@ -1,27 +1,6 @@
 import React from 'react'
 import { Dropdown } from 'react-bootstrap';
 
-import $ from 'jquery'
-
-
-import '../../assets/css/bootstrap.min.css';
-import '../../assets/lib/animate/animate.min.css';
-import '../../assets/lib/owlcarousel/assets/owl.carousel.min.css';
-import '../../assets/css/style.css';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'animate.css/animate.min.css';
-import 'owl.carousel/dist/assets/owl.carousel.min.css';
-
-import 'owl.carousel';
-
-import '../../assets/lib/easing/easing.js'
-import '../../assets/mail/contact.js'
-import '../../assets/mail/jqBootstrapValidation.min.js'
-import '../../assets/js/main.js'
-
-import "https://code.jquery.com/jquery-3.4.1.min.js"
-import "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
 
 
 

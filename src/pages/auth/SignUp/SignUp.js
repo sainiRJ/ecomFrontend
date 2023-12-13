@@ -13,6 +13,16 @@ const SignUp = () => {
     e.preventDefault();
     navigate('/login');
     // Handle form submission here
+    try {
+      const response = await axios.post('http://localhost:8000/register', {
+        email,
+        password,
+      });
+      console.log('Signup successful!', response.data);
+      // Handle successful login, redirect, or any other action
+    } catch (error) {
+        console.error('Request failed:', error.message);  
+    }
   }
 
   return (
