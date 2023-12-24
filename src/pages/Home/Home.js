@@ -7,6 +7,9 @@ import HomeCarousel from '../../layouts/HomeCarousel/HomeCarousel';
 import Feature from '../../layouts/Feature/Feature';
 import Category from '../../layouts/Category/Category';
 import Products from '../../components/Products/Products';
+import SpecialOffer from '../../components/Products/SpecialOffer/specialOffer';
+import RecentProducts from '../../components/Products/RecentProduct/RecentProduct';
+import Footer from '../../layouts/Footer/Footer';
 
 
 function Home() {
@@ -17,6 +20,9 @@ function Home() {
     <Feature></Feature>
     <Category></Category>
     <Products></Products>
+    <SpecialOffer/>
+    <RecentProducts/>
+    <Footer/>
   </>
    
   )
