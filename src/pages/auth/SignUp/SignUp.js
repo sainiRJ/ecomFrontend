@@ -14,7 +14,7 @@ const SignUp = () => {
     navigate('/login');
     // Handle form submission here
     try {
-      const response = await axios.post('http://localhost:8000/register', {
+      const response = await axios.post('http://localhost:5001/register', {
         email,
         password,
       });

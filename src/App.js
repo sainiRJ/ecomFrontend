@@ -5,6 +5,9 @@ import "./App.css";
 import Home from "./pages/Home/Home";
 import Login from "./pages/auth/Login/Login";
 import SignUp from "./pages/auth/SignUp/SignUp";
+import AddProduct from "./pages/AddProduct/AddProduct";
+import Shop from "./pages/Shop/Shop";
+import ShopDetail from "./pages/ShopDetail/ShopDetail";
 export default function App() {
   return <>
   
@@ -13,6 +16,11 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
+      <Route path="/addProduct" element={<AddProduct />} />
+      <Route path="/shop" element={<Shop/>} />
+      <Route path="/detail" element={<ShopDetail/>} />
+
+
 
     </Routes>
   </BrowserRouter>,

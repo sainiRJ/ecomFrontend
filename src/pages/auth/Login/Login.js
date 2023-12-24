@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Card, Row, Col, Form, Button } from 'react-bootstrap';
 import axios from 'axios'; // Import Axios
+import image from '../../../assets/img/carousel-3.jpg'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -11,11 +12,15 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8000/login', {
+      const response = await axios.post('http://localhost:5001/login', {
         email,
         password,
       });
-      console.log('Login successful!', response.data);
+
+      const { token } = response.data;
+      localStorage.setItem('token', token);
+      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+      console.log('Login successful!', response.data.token);
       // Handle successful login, redirect, or any other action
     } catch (error) {
       if (error.response) {
@@ -73,7 +78,7 @@ const Login = () => {
                 <Col md={6}>
                   {/* Image Section */}
                   <img
-                    src=""
+                    src={image}
                     alt="Login Image"
                     className="img-fluid"
                   />

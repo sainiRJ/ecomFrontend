@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const FeaturedProduct = ({ product }) => {
+const ShopProduct = ({ product }) => {
   return (
-    <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
+    <div className="col-lg-4 col-md-4 col-sm-6 pb-1">
       <div className="product-item bg-light mb-4">
-        <div className="product-img position-relative overflow-hidden" style={{ height: '350px' }}>
+        <div className="product-img position-relative overflow-hidden" style={{ height: '300px'}}>
           <img
             className="img-fluid w-100 h-100"
             src={product.image}
             alt={product.title}
-            style={{ objectFit: 'contain', width: '100px', height: '200px' }}
+            style={{ objectFit: 'contain', width: '150px', height: '200px' }}
           />
           <div className="product-action">
             <a className="btn btn-outline-dark btn-square" href=""><i className="fa fa-shopping-cart"></i></a>
@@ -36,7 +36,7 @@ const FeaturedProduct = ({ product }) => {
   );
 };
 
-const FeaturedProducts = () => {
+const ShopProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -53,13 +53,10 @@ const FeaturedProducts = () => {
   }, []);
 
   return (
-    <div className="container-fluid pt-5 pb-3">
-      <h2 className="section-title position-relative text-uppercase mx-xl-5 mb-4"><span className="bg-secondary pr-3">Featured Products</span></h2>
-      <div className="row px-xl-5">
-        {products.map(product => <FeaturedProduct key={product.id} product={product} />)}
-      </div>
+    <div className="row px-xl-5">
+      {products.map(product => <ShopProduct key={product.id} product={product} />)}
     </div>
   );
 };
 
-export default FeaturedProducts;
+export default ShopProducts;
