@@ -6,10 +6,10 @@ const Footer = () => {
       <div className="row px-xl-5 pt-5">
         <div className="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
           <h5 className="text-secondary text-uppercase mb-4">Get In Touch</h5>
-          <p className="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor. Rebum tempor no vero est magna amet no</p>
-          <p className="mb-2"><i className="fa fa-map-marker-alt text-primary mr-3"></i>123 Street, New York, USA</p>
-          <p className="mb-2"><i className="fa fa-envelope text-primary mr-3"></i>info@example.com</p>
-          <p className="mb-0"><i className="fa fa-phone-alt text-primary mr-3"></i>+012 345 67890</p>
+          <p className="mb-4">We are world underrated team. Which can be helpfull for You by our knowledge</p>
+          <p className="mb-2"><i className="fa fa-map-marker-alt text-primary mr-3"></i>Prem Nagar-3rd, Delhi-86, Bharat</p>
+          <p className="mb-2"><i className="fa fa-envelope text-primary mr-3"></i>saini@gmail.com</p>
+          <p className="mb-0"><i className="fa fa-phone-alt text-primary mr-3"></i>+91 7310156773</p>
         </div>
         <div className="col-lg-8 col-md-12">
           <div className="row">
@@ -37,7 +37,7 @@ const Footer = () => {
             </div>
             <div className="col-md-4 mb-5">
               <h5 className="text-secondary text-uppercase mb-4">Newsletter</h5>
-              <p>Duo stet tempor ipsum sit amet magna ipsum tempor est</p>
+              <p>Shoppix  - Where Shopping Meets Joy!"</p>
               <form action="">
                 <div className="input-group">
                   <input type="text" className="form-control" placeholder="Your Email Address" />
@@ -48,10 +48,10 @@ const Footer = () => {
               </form>
               <h6 className="text-secondary text-uppercase mt-4 mb-3">Follow Us</h6>
               <div className="d-flex">
-                <a className="btn btn-primary btn-square mr-2" href="#"><i className="fab fa-twitter"></i></a>
+                <a className="btn btn-primary btn-square mr-2" href="https://twitter.com/RajeshS44121795"><i className="fab fa-twitter"></i></a>
                 <a className="btn btn-primary btn-square mr-2" href="#"><i className="fab fa-facebook-f"></i></a>
-                <a className="btn btn-primary btn-square mr-2" href="#"><i className="fab fa-linkedin-in"></i></a>
-                <a className="btn btn-primary btn-square" href="#"><i className="fab fa-instagram"></i></a>
+                <a className="btn btn-primary btn-square mr-2" href="https://www.linkedin.com/in/rajesh-saini-8830911b1/"><i className="fab fa-linkedin-in"></i></a>
+                <a className="btn btn-primary btn-square" href="https://www.instagram.com/rajesh_saini_saini/"><i className="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -62,8 +62,8 @@ const Footer = () => {
           <p className="mb-md-0 text-center text-md-left text-secondary">
             &copy; <a className="text-primary" href="#">Domain</a>. All Rights Reserved. Designed
             by
-            <a className="text-primary" href="https://htmlcodex.com">HTML Codex</a>
-            <br />Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+            <a className="text-primary" href="#"> Saini</a>
+            <br />Distributed By: <a href="#" target="_blank">SainiTeam</a>
           </p>
         </div>
         <div className="col-md-6 px-xl-0 text-center text-md-right">
