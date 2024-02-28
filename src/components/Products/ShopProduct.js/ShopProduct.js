@@ -2,6 +2,22 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const ShopProduct = ({ product }) => {
+  const handleAddToCart = (product) => {
+    const token = localStorage.getItem('token');
+
+    axios.post('http://localhost:5001/addcart', product,{
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then(response => {
+        console.log('Product added to cart:', response.data);
+      })
+      .catch(error => {
+        console.error('Error adding product to cart:', error);
+      });
+  };
   return (
     <div className="col-lg-4 col-md-4 col-sm-6 pb-1">
       <div className="product-item bg-light mb-4">
@@ -13,7 +29,7 @@ const ShopProduct = ({ product }) => {
             style={{ objectFit: 'contain', width: '150px', height: '200px' }}
           />
           <div className="product-action">
-            <a className="btn btn-outline-dark btn-square" href=""><i className="fa fa-shopping-cart"></i></a>
+            <a className="btn btn-outline-dark btn-square" href="" onClick={handleAddToCart(product)}><i className="fa fa-shopping-cart"></i></a>
             <a className="btn btn-outline-dark btn-square" href=""><i className="far fa-heart"></i></a>
             <a className="btn btn-outline-dark btn-square" href=""><i className="fa fa-sync-alt"></i></a>
             <a className="btn btn-outline-dark btn-square" href=""><i className="fa fa-search"></i></a>
@@ -26,7 +42,7 @@ const ShopProduct = ({ product }) => {
           </div>
           <div className="d-flex align-items-center justify-content-center mb-1">
             {Array.from({ length: 5 }).map((_, index) => (
-              <small key={index} className={`fa fa-star${index + 1 <= product.rating ? ' text-primary' : ''} mr-1`}></small>
+              <small key={index} className={`fa fa-star${index + 1 <= product.ratings ? ' text-primary' : ''} mr-1`}></small>
             ))}
             <small>({product.reviews})</small>
           </div>

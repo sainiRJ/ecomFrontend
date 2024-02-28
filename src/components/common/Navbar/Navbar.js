@@ -81,7 +81,7 @@ const Navbar = () => {
                     Pages <i className="fa fa-angle-down mt-1"></i>
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item as={Link} to="/cart">Shopping Cart</Dropdown.Item>
+                    <Dropdown.Item as={Link} to="/cart">Add-To-Cart</Dropdown.Item>
                     <Dropdown.Item as={Link} to="/checkout">Checkout</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
