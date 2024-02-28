@@ -8,6 +8,8 @@ import SignUp from "./pages/auth/SignUp/SignUp";
 import AddProduct from "./pages/AddProduct/AddProduct";
 import Shop from "./pages/Shop/Shop";
 import ShopDetail from "./pages/ShopDetail/ShopDetail";
+import AddToCart from "./components/AddTocart/AddToCart";
+import Checkout from "./components/Checkout/Checkout";
 export default function App() {
   return <>
   
@@ -19,7 +21,8 @@ export default function App() {
       <Route path="/addProduct" element={<AddProduct />} />
       <Route path="/shop" element={<Shop/>} />
       <Route path="/detail" element={<ShopDetail/>} />
-
+      <Route path="/cart" element={<AddToCart/>} />
+      <Route path="/checkout" element={<Checkout/>} />
 
 
     </Routes>
