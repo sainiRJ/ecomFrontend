@@ -10,6 +10,7 @@ import Shop from "./pages/Shop/Shop";
 import ShopDetail from "./pages/ShopDetail/ShopDetail";
 import AddToCart from "./components/AddTocart/AddToCart";
 import Checkout from "./components/Checkout/Checkout";
+import ContactUs from "./pages/ContactUs/ContactUs";
 export default function App() {
   return <>
   
@@ -23,6 +24,8 @@ export default function App() {
       <Route path="/detail" element={<ShopDetail/>} />
       <Route path="/cart" element={<AddToCart/>} />
       <Route path="/checkout" element={<Checkout/>} />
+      <Route path="/contact" element={<ContactUs/>} />
+
 
 
     </Routes>
