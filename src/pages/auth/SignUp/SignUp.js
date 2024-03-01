@@ -26,36 +26,39 @@ const SignUp = () => {
   }
 
   return (
-    <div className="registration-form">
-      <h1>Register</h1>
-      <p>Please fill in this form to create an account.</p>
-      <hr />
+    <div className="wrapper">
+      <div className="login-box">
+        <form onSubmit={handleSubmit}>
+          <h2>Login</h2>
 
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email</label>
-        <input 
-          type="text" 
-          placeholder="Enter Email" 
-          name="email" 
-          id="email" 
-          required 
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-        />
+          <div className="input-box">
+            <span className="icon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
+            <input type="email" required onChange={(e) => setEmail(e.target.value)} />
+            <label>Email</label>
+          </div>
 
-        <label htmlFor="psw">Password</label>
-        <input 
-          type="password" 
-          placeholder="Enter Password" 
-          name="psw" 
-          id="psw" 
-          required 
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-        />
+          <div className="input-box">
+            <span className="icon">
+              <ion-icon name="lock-closed"></ion-icon>
+            </span>
+            <input type="password" required onChange={(e) => setPassword(e.target.value)} />
+            <label>Password</label>
+          </div>
 
-        <button type="submit">Register</button>
-      </form>
+          <div className="remember-forgot">
+            <label><input type="checkbox" /> Remember me</label>
+            <a href="#">Forgot Password?</a>
+          </div>
+
+          <button type="submit">Login</button>
+
+          <div className="register-link">
+            <p>Don't have an account? <a href="#">Register</a></p>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

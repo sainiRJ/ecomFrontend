@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import axios from "axios";
 
 function ProductDetails() {
     // State for managing rating
     const [rating, setRating] = useState(0);
+    const [product, setProduct] = useState([]);
+
 
     // State for managing review form data
     const [reviewData, setReviewData] = useState({
@@ -35,6 +38,21 @@ function ProductDetails() {
         });
     };
 
+
+  
+    useEffect(() => {
+      // Fetch data from the backend using Axios
+      axios.get("http://localhost:5001/product")
+        .then(response => {
+          // Assuming the response data is an array of products
+          setProduct(response.data);
+          console.log("response" + response.data)
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    }, []);
+
     return (<>
         <div className="container-fluid pb-5">
             <div className="row px-xl-5">
@@ -66,7 +84,7 @@ function ProductDetails() {
                 <div className="col-lg-7 h-auto mb-30">
                     {/* Product details */}
                     <div className="h-100 bg-light p-30">
-            <h3>Product Name Goes Here</h3>
+            <h3>{product.title}</h3>
             <div className="d-flex mb-3">
                 <div className="text-primary mr-2">
                     <small className="fas fa-star"></small>
