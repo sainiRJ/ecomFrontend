@@ -2,6 +2,21 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const FeaturedProduct = ({ product }) => {
+  const handleAddToCart = () => {
+    const token = localStorage.getItem('token');
+    axios.post('http://localhost:5001/addcart', product, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then(response => {
+        console.log('Product added to cart:', response.data);
+      })
+      .catch(error => {
+        console.error('Error adding product to cart:', error);
+      });
+  };
   return (
     <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
       <div className="product-item bg-light mb-4">
@@ -13,7 +28,7 @@ const FeaturedProduct = ({ product }) => {
             style={{ objectFit: 'contain', width: '100px', height: '200px' }}
           />
           <div className="product-action">
-            <a className="btn btn-outline-dark btn-square" href=""><i className="fa fa-shopping-cart"></i></a>
+            <a className="btn btn-outline-dark btn-square"  onClick={handleAddToCart} href="/cart"><i className="fa fa-shopping-cart"></i></a>
             <a className="btn btn-outline-dark btn-square" href=""><i className="far fa-heart"></i></a>
             <a className="btn btn-outline-dark btn-square" href=""><i className="fa fa-sync-alt"></i></a>
             <a className="btn btn-outline-dark btn-square" href=""><i className="fa fa-search"></i></a>
