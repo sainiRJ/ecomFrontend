@@ -65,8 +65,8 @@ const Navbar = () => {
         <div className="col-lg-9">
           <nav className="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
             <Link to="/" className="text-decoration-none d-block d-lg-none">
-              <span className="h1 text-uppercase text-dark bg-light px-2">Multi</span>
-              <span className="h1 text-uppercase text-light bg-primary px-2 ml-n1">Shop</span>
+              {/* <span className="h1 text-uppercase text-dark bg-light px-2">Shopix</span> */}
+              <span className="h1 text-uppercase text-light bg-primary px-2 ml-n1">Shoppix</span>
             </Link>
             <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
               <span className="navbar-toggler-icon"></span>
@@ -81,7 +81,7 @@ const Navbar = () => {
                     Pages <i className="fa fa-angle-down mt-1"></i>
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <Dropdown.Item as={Link} to="/cart">Shopping Cart</Dropdown.Item>
+                    <Dropdown.Item as={Link} to="/cart">Add-To-Cart</Dropdown.Item>
                     <Dropdown.Item as={Link} to="/checkout">Checkout</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
